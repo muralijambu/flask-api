@@ -28,20 +28,5 @@ def login():
 def user(usr):
     return f'hello {usr}'
 
-@app.route('/login2', methods=['POST','GET'])
-def login2():
-    if request.method=='POST':
-        user1 =request.form['usrname']
-        return redirect(url_for('user', usr=user1))
-    return render_template('login.html')
-
-@app.route('/login3', methods=['POST','GET'])
-def login3():
-    if request.method=='POST':
-        user1 =request.form['usrname']
-        return redirect(url_for('user', usr=user1))
-    return render_template('login.html')
-
-
 if __name__=='__main__':
     app.run(debug=True)
