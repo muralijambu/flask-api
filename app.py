@@ -10,6 +10,9 @@ def courses():
 @app.route('/admin')
 def admin():
     return redirect(url_for('courses'))
+@app.rout('/records')
+def records():
+    return '<h1>number 1 record goes to you</h1>'
 @app.route('/<name>')
 def name(name):
     return f'hello {name}'
